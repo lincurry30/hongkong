@@ -569,23 +569,38 @@
     }
 
 
-
-    /* Strong fix: make the Hong Kong and beyond kicker readable on dark background */
+    /* Hong Kong and beyond label mask */
     #beyond .section-kicker,
     .beyond-section .section-kicker{
+      position:relative !important;
+      z-index:2 !important;
       color:#FFFFFF !important;
       display:inline-flex !important;
       align-items:center !important;
       width:max-content !important;
-      padding:8px 14px !important;
+      padding:9px 15px !important;
       border-radius:999px !important;
-      background:rgba(255,255,255,.18) !important;
-      border:1px solid rgba(255,255,255,.34) !important;
-      box-shadow:0 10px 26px rgba(0,0,0,.16) !important;
-      backdrop-filter:blur(10px) !important;
+      background:rgba(22,33,49,.58) !important;
+      border:1px solid rgba(255,255,255,.36) !important;
+      box-shadow:
+        0 12px 28px rgba(0,0,0,.24),
+        inset 0 1px 0 rgba(255,255,255,.16) !important;
+      backdrop-filter:blur(14px) !important;
+      -webkit-backdrop-filter:blur(14px) !important;
       margin-bottom:16px !important;
-      text-shadow:0 1px 3px rgba(0,0,0,.35) !important;
+      text-shadow:0 1px 4px rgba(0,0,0,.52) !important;
       letter-spacing:.12em !important;
+    }
+
+    #beyond .section-kicker::before,
+    .beyond-section .section-kicker::before{
+      content:"" !important;
+      position:absolute !important;
+      inset:-5px !important;
+      z-index:-1 !important;
+      border-radius:999px !important;
+      background:rgba(0,0,0,.28) !important;
+      filter:blur(10px) !important;
     }
 
   </style>
@@ -616,11 +631,11 @@
           <div class="header-contact-label">Contact our Hong Kong team</div>
           <div class="header-contact-details" aria-label="Hong Kong DMC contact details">
             <span><strong>Tel:</strong> <a href="tel:+852">+852</a></span>
-            <span><strong>Mail:</strong> <a href="mailto:info@hongkongdmc.com">info@hongkongdmc.com</a></span>
+            <span><strong>Mail:</strong> <a href="mailto:info@hongkong-dmc.com">info@hongkong-dmc.com</a></span>
             <span class="header-address"><strong>Address:</strong> Hong Kong SAR, China</span>
           </div>
           <div class="header-contact-row">
-            <a class="email-link" href="mailto:info@hongkongdmc.com">✉ info@hongkongdmc.com</a>
+            <a class="email-link" href="mailto:info@hongkong-dmc.com">✉ info@hongkong-dmc.com</a>
             <a class="btn btn-primary" href="https://www.thechinadmc.com/contact" target="_blank" rel="noopener">Send Inquiry</a>
           </div>
         </div>
@@ -937,7 +952,7 @@
       <div class="container footer-row">
         <div>© New Imagination DMC China. Hong Kong DMC services for international planners.</div>
         <div class="footer-links">
-          <a href="mailto:info@hongkongdmc.com">info@hongkongdmc.com</a>
+          <a href="mailto:info@hongkong-dmc.com">info@hongkong-dmc.com</a>
           <a href="https://www.thechinadmc.com/about" target="_blank" rel="noopener">About Us</a>
           <a href="https://www.thechinadmc.com/destinations" target="_blank" rel="noopener">Destinations</a>
         </div>
